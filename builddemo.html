@@ -11,11 +11,18 @@
                 <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
             </a-assets>
 
-            <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+            <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
+                    animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
             
             
             <a-sky src="#skyTexture"></a-sky>
-            <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
+
+            <a-light type="ambient" color="#445451"></a-light>
+            <a-light type="point" intensity="2" position="2 4 4"></a-light>
+
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
 
 
         
